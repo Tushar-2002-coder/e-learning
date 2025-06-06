@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Registration</title>
+  <style>
+    body {
+      font-family: Arial;
+      background-image: url('https://raw.githubusercontent.com/Tushar-2002-coder/e-learning/refs/heads/main/1.jpg');
+      background-size: cover;        
+      background-repeat: no-repeat;  
+      background-position: center; 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 125vh;
+      margin: 0;
+    }
+
+    .form-box {
+      background-image: url('https://raw.githubusercontent.com/Tushar-2002-coder/e-learning/refs/heads/main/5.jpg');
+      background-size: cover;        
+      background-repeat: no-repeat;  
+      background-position: center;
+      padding: 30px;
+      border-radius: 50px;
+      box-shadow: 0 0 20px #c23131;
+      width: 300px;
+      position: relative;
+      color:#ffffff;
+    }
+
+    .form-box h2 {
+      text-align: center;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin: 6px 0;
+      box-sizing: border-box;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 8px;
+      cursor: pointer;
+      background-color:#eb211a;
+      color: #f4f6ec;
+      border-radius: 50px;
+    }
+    button:hover {
+      background-color: #12d412;
+      color:#000000;
+    }
+    .back-btn {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      width:15%;
+      background-color:#eb211a;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+      color: rgb(255, 255, 255);
+     }
+     .back-btn:hover {
+      background-color: #12d412;
+      color:#000000;
+     }
+  </style>
+</head>
+<body>
+  <div class="form-box">
+    <button class="back-btn" onclick="location.href='index.html'">Back</button>
+    <h2>Register</h2>
+    <center><p><h4><u>Welcome To Tushar's Study Zone</u></h4></p></center>
+    <input type="text" id="name" placeholder="Full Name" />
+    <input type="number" id="age" placeholder="Age" />
+    <input type="date" id="dob" />
+    <input type="text" id="course" placeholder="Course" />
+    <input type="text" id="college" placeholder="College Name" />
+    <input type="text" id="branch" placeholder="Branch Name" />
+    <input type="text" id="email" placeholder="Email ID" />
+    <input type="text" id="username" placeholder="Username" />
+    <input type="password" id="password" placeholder="Password" />
+    <input type="password" id="confirmPassword" placeholder="Confirm Password" />
+
+    <button onclick="register()">Submit</button>
+    <button onclick="resetForm()">Reset</button>
+  </div>
+
+  <script>
+    // Redirect to index on refresh
+    if (performance.navigation.type === 1) {
+      window.location.href = "index.html";
+    }
+
+    function register() {
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+      const confirmPassword = document.getElementById("confirmPassword").value;
+
+      if (!username || !password || !confirmPassword) {
+        alert("Please fill username and passwords");
+        return;
+      }
+
+      if (password !== confirmPassword) {
+        alert("Passwords do not match!");
+        return;
+      }
+
+      const userData = {
+        name: document.getElementById("name").value,
+        age: document.getElementById("age").value,
+        dob: document.getElementById("dob").value,
+        course: document.getElementById("course").value,
+        college: document.getElementById("college").value,
+        branch: document.getElementById("branch").value,
+        email: document.getElementById("email").value,
+        username: username,
+        password: password
+      };
+
+      localStorage.setItem("userData", JSON.stringify(userData));
+      alert("Registration successful!");
+      window.location.href = "dashboard.html";
+    }
+
+    function resetForm() {
+      document.querySelectorAll("input").forEach(input => input.value = "");
+    }
+  </script>
+</body>
+</html>
