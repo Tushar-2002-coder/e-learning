@@ -16,12 +16,6 @@
       color: #333;
       transition: background-color 0.3s, color 0.3s;
     }
-
-    .dark-mode {
-      background-color: #000000;
-      color: #daf34d;
-    }
-
     .top-bar {
       display: flex;
       justify-content: space-between;
@@ -222,7 +216,7 @@
     </a>
 
     <div>
-      <span id="darkModeToggle" class="dark-toggle">🌙</span>
+      
       <button class="profile-button" onclick="openProfile()">Profile</button>
       <button class="logout-button" onclick="logoutUser()">Logout</button>
     </div>
@@ -290,7 +284,6 @@
   <script>
     const menuBtn = document.getElementById("menuBtn");
     const menu = document.getElementById("menu");
-    const darkToggle = document.getElementById("darkModeToggle");
     const profileModal = document.getElementById("profileModal");
     const overlay = document.getElementById("overlay");
     const nameField = document.getElementById("nameField");
@@ -300,9 +293,6 @@
       menu.classList.toggle("show");
     });
 
-    darkToggle.addEventListener("click", () => {
-      document.body.classList.toggle("dark-mode");
-    });
 
     function openProfile() {
       const userData = JSON.parse(localStorage.getItem("user")) || { name: "", email: "" };
