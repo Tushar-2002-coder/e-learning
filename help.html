@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Help | Study Material Tushar</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-image: url('https://raw.githubusercontent.com/Tushar-2002-coder/e-learning/refs/heads/main/4.jpg');
+      background-size: cover;        
+      background-repeat: no-repeat;  
+      background-position: center; 
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-image: url('https://raw.githubusercontent.com/Tushar-2002-coder/e-learning/refs/heads/main/7.jpg');
+      background-size: cover;        
+      background-repeat: no-repeat;  
+      background-position: center; 
+      color: rgb(236, 236, 236);
+      padding: 20px;
+      text-align: center;
+    }
+
+    .help-message {
+      background-image: url('https://raw.githubusercontent.com/Tushar-2002-coder/e-learning/refs/heads/main/7.jpg');
+      background-size: cover;        
+      background-repeat: no-repeat;  
+      background-position: center; 
+      color: #ffffff;
+      padding: 15px 20px;
+      text-align: center;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .contact-info {
+      background-color: #7e8b91d0;
+      color: #ffffff;
+      text-align: center;
+      padding: 10px 20px 20px;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    section {
+      max-width: 600px;
+      margin: 20px auto 40px;
+      background-image: url('https://raw.githubusercontent.com/Tushar-2002-coder/e-learning/refs/heads/main/5.jpg');
+      background-size: cover;        
+      background-repeat: no-repeat;  
+      background-position: center; 
+      padding: 30px;
+      box-shadow: 0 0 20px #c23131;
+      border-radius: 10px;
+      border-radius: 50px;
+      color: #f09d44;
+    }
+    
+
+    h2 {
+      text-align: center;
+      color: #ddea4c;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      font-size: 15px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      color:#b7b3b3;
+      background-color: #0b5674;
+      font-size: 14px;
+    }
+    .button-group {
+      display: flex;
+      justify-content: space-between;
+    }
+    button {
+      padding: 10px 20px;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 50px;
+      background-color:#eb211a;
+      color: white;
+    }
+    button:hover{
+        background-color: #12d412;
+        color:#000000;
+    }
+    .back-btn {
+      background-color:#eb211a;
+      color: white;
+      text-decoration: none;
+      text-align: center;
+      border-radius: 50px;
+      display: inline-block;
+      padding: 10px 20px;
+
+    }
+    .back-btn:hover{
+        background-color: #12d412;
+        color:#000000;
+    }
+  </style>
+   <script>
+  if (performance.navigation.type === 1) {
+    window.location.href = "dashboard.html";
+  }
+</script>
+</head>
+<body>
+
+  <header>
+    <h1>Study Material Tushar</h1>
+    <p>Help & Feedback Section</p>
+  </header>
+
+  <div class="help-message">
+    Need any help? You can send your enquiry here.
+  </div>
+
+  <div class="contact-info">
+    <p><strong>Email:</strong> tusharsharma89372@gmail.com</p>
+    <p><strong>Phone:</strong> +91-8260291705</p>
+  </div>
+
+  <section>
+    <h2>Send Us Your Feedback</h2>
+    <form action="https://getform.io/f/bxoyykja" method="POST">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="thankyou.html">
+
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Your Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Your Message:</label>
+      <textarea id="message" name="message" rows="6" required></textarea>
+
+      <div class="button-group">
+      <button type="submit" class="submit-btn">Submit</button>
+      <button onclick="location.href='dashboard.html'" class="back-btn">Back</button>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Study Material Tushar. All rights reserved.
+  </footer>
+
+</body>
+</html>
